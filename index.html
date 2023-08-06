@@ -13,39 +13,39 @@
     <!-- May change to have fonts that I like more later -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
   </head>
 
   <body>
-    <header>
-      <div class="logo">
-        <img src="img/cal.png" alt="">
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-       
-          
 
-        </ul>
-      </nav>
+      <header>
+        <div class="logo">
+          <a href="/"><img src="./img/logo.png" alt=""></a> 
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">What I Do</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">My Skills</a></li>
+            <li class="nav__item"><a href="#work" class="nav__link">Projects and Experiences</a></li>
+           
+          </ul>
+        </nav>
 
-    </header>
+      </header>
 
     <!-- Introduction  -->
     <section class="intro" id="home">
       <h1 class="section__title section__title--intro">
           Hi, I am <strong>Calvin Van</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">CS Undergraduate</p>
-      <img src="img/cal.png" alt="a picture of Jane Smith smiling" class="intro__img">
+      <p class="section__subtitle section__subtitle--intro">First-Generation CS Undergraduate at UTD</p>
+      <img src="./img/calhead.png" alt="a picture of Jane Smith smiling" class="intro__img">
     </section>
 
 
@@ -55,18 +55,35 @@
         <div class="services">
 
           <div class="service">
-            <h3>1 </h3>
-            <p>1 1 1 1 1 1 1 1 1 </p>
+            <h3>Sophomore College Undergraduate</h3>
+            <p>I am currently attending the University of Texas at Dallas and pursuing a Bachorler's Science Degree in Computer Science. 
+              I currently have a 4.0 GPA and notable classes that I have taken are Intro to Computer Science, Computer Science I, and 
+              Discrete Mathematics I. Notable classes that I will be taking in Fall 2023 include Computer Science II, Computer Architecture, 
+              Discrete Math II, and Statistics and Probability for Computer Science. </p>
           </div> <!-- / service -->
 
           <div class="service">
-            <h3>2 </h3>
-            <p> 22 2 2 2 2 2 2 </p>
+            <h3>Machine Learning Intern</h3>
+            <p>I am finishing up an internship with the U.S Army Corps of Engineers and am located at the Engineer Research and Development Center (ERDC) 
+              in Vicksburg, Mississippi. I am involved in researching about machine learning and working with Nvidia DeepStream GStreamer pipelines 
+              to figure out its capabilities in deploying inference models that perform segmentation and object detection. 
+              My responsibilities entail experimenting and researching about DeepStream pipeline configurations and documenting the challenges and capabilities that come with 
+              integrating previously used PyTorch models. </p>
           </div> <!-- / service -->
 
           <div class="service">
-            <h3>3 </h3>
-            <p>3 3 3 3 3 3 3</p>
+            <h3>"Party Trick" Hobbyist </h3>
+            <p>I find it fascinating how as humans we have found a myriad of ways to entertain ourselves and 
+              to go even further my creating mastery for these skills. That is one of the main reasons for why I find such great enjoyment from
+              one of my hobbies - learning "random" skills.
+              Beyond that, I simply enjoy learning these skills because I believe it would be cool to do so and that the process of learning something new brings me a great fulfillment.
+              <br><br>
+              
+              Some skills that I have learned in the past (though many of them to a basic degree) are breakdancing, butterfly knife tricks, beatboxing, juggling,
+              and even nunchaku tricks to name a few! As of now and outside of learning programming languages and software, I currently dedicate much of my free time
+              in learning how to play volleyball and learning to freeskate!
+
+             </p>
           </div> <!-- / service -->
 
         </div> <!-- / closed services-->
@@ -76,77 +93,157 @@
 
       <!-- About me -->
       <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle section__subtitle--about">Computer Science Undergrad at UTD</p>
+        <h2 class="section__title section__title--about">About me</h2>
+        <p class="section__subtitle section__subtitle--about">First-Generation Computer Science Student </p>
         
         <div class="about-me__body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Growing up, I was always fascinated with technology and how it has changed the world as we know it, and while I admit that my interest 
+              was first sparked by cool gadgets such as computers, video game consoles, and smartphones, 
+              I was further captivated by the technology that I feel many of us do not appreciate enough - even though 
+              they have made our lives more convenient or fundamentally affect how we live day to day.<br><br> 
+              For example, take what is my favorite piece of technology and may be what I believe everyone should have - the refrigerator. Of course, it aids us greatly in
+              allowing us to preserve our food longer and decreases food waste, but let me take it a step further. My favorite thing about it would be how - with a filter -
+              it can instantly provide you clean, cold drinking water, and do not get me started on how incredible it is that we get to have
+              convenient access to ice today because of it! To top it all off how else would we have the ability to conventiently store one of the greatest foods to ever exist? Ice Cream!   </p>
+            <p>It is because of this fascination that I ultimately decided to major in Computer Science. The notion of knowing that I will get to be part of the world that gets to help create technology that offers such pleasures or even just makes someone's day a bit better is something you cannot find anywhere else and what drew me into this the field that is tehnology .</p>
+            
         </div>
         
-        <img src="img/cal2.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        <img src="./img/cal2.jpg" alt="Jane leaning against a bus" class="about-me__img">
      </section>
 
-      <!-- My Work -->
+
+     <!-- Skills Section -->
+
+     <section class="skills-section" id="skills">
+      <div class="inner">
+        <div class="skillsHeader">
+          <h1>My Skills</h1>
+        </div>
+        <div class="skillscontainer">
+
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="skillimg">
+                <img src="./img/python.png" class="skill-icon">
+              </div>
+              <h3>Python</h3>
+            </div>
+     
+          </div>
+
+          <div class="skill-box" >
+            <div class="skill-title">
+              <div class="skillimg">
+                <img src="./img/C++.png" class="skill-icon" >
+              </div>
+              <h3>C++</h3>
+            </div>
+            
+            
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="skillimg">
+                <img src="./img/html.png" class="skill-icon">
+              </div>
+              <h3>HTML</h3>
+            </div>
+   
+
+          </div>
+
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="skillimg">
+                <img src="./img/css.png" class="skill-icon">
+              </div>
+              <h3>CSS</h3>
+            </div>
+            
+         
+          </div>
+          <div class="skill-box">
+            <div class="skill-title">
+              <div class="skillimg">
+                <img src="./img/js.png" class="skill-icon"  >
+              </div>
+              <h3>Javascript</h3>
+            </div>
+         
+  
+          </div>
+
+
+        </div>
+
+        </div>
+      </div>
+     </section>
+
+
+
+      <!-- My Projects and Experiences -->
       <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My Work</h2>
-        <p class="section__subtitle section__subtitle--work">Selection of my range of work</p>
+        <h2 class="section__title section__title--work">My Projects and Experiences</h2>
+        <p class="section__subtitle section__subtitle--work">Selection of my range of projects and experiences</p>
 
           <div class="portfolio">
 
             <!-- Portfolio item -1 -->
-            <a href="portfolio-item.html" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
-
-            <!-- Portfolio item -2 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
-
-            <!-- Portfolio item -3 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
-
-            <!-- Portfolio item -4 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
-            
-            <!-- Portfolio item -5 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
-
-            <!-- Portfolio item -6 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
-            </a>
 
 
-            <!-- Portfolio item -7 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
+            <a href="./projects/mcTester.html" class="portfolio__item">
+              <img src="./img/morseCodeImages/morsePic.png" alt="" class="portfolio__img">
+              <div class="image__overlay">
+                <div class="image__title">Morse Code Tester</div>
+                <span id class="image__year">Year </span><span class="years">2023-Ongoing</span>
+                <span id class="image__description">Description </span><span class="description">Multiple Choice Quiz Website for Morse Code</span>
+                <span id class="image__role">Languages </span><span class="role">Javascript, HTML, JSS</span>
+              </div>
             </a>
 
-          
-            <!-- Portfolio item -8 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
+            <a href="./projects/erdcIntern.html" class="portfolio__item">
+              <img src="./img/erdcImages/erdc.jpg" alt="" class="portfolio__img">
+              <div class="image__overlay">
+                <div class="image__title" style="font-size:1rem;" >US ARMY ERDC Summer Internship</div>
+                <span id class="image__year">Year </span><span class="years">2023-2023</span>
+                <span id class="image__description">Description </span><span class="description">Nvidia DeepStream Pipelines and ML models</span>
+                <span id class="image__role">Role </span><span class="role">Intern</span>
+              </div>
             </a>
 
-          
-            <!-- Portfolio item -9 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
+            <a href="./projects/stemStore.html" class="portfolio__item" style="background:rgba(11, 127, 195, 0.696)">
+              <img src="./img/stemStoreImages/ssPic.png" alt="" class="portfolio__img">
+              <div class="image__overlay">
+                <div class="image__title" >Stem Store</div>
+                <span id class="image__year">Year </span><span class="years">2021-2022</span>
+                <span id class="image__description">Description </span><span class="description">E-Commerce website for high school Capstone Project</span>
+                <span id class="image__role">Role </span><span class="role">Portfolio Manager</span>
+              </div>
             </a>
 
-          
-            <!-- Portfolio item -10 -->
-            <a href="#" class="portfolio__item">
-              <img src="img/cal2.jpg" alt="" class="portfolio__img">
+            <a href="./projects/spiritAnimal.html" class="portfolio__item">
+              <img src="./img/spiritAnimalImages/spiritGame.png" alt="" class="portfolio__img">
+              <div class="image__overlay">
+                <div class="image__title">Board Game Design</div>
+                <span id class="image__year">Year </span><span class="years">2019-2020</span>
+                <span id class="image__description">Description </span><span class="description">Board Game for Technology Student Association Competition</span>
+                <span id class="image__role">Role </span><span class="role">Project Lead</span>
+              </div>
             </a>
+
+            <a href="./projects/davidGame.html" class="portfolio__item">
+              <img src="./img/davidGameImages/davidGamePic.jpg" alt="" class="portfolio__img">
+              <div class="image__overlay">
+                <div class="image__title">David RPG Game</div>
+                <span id class="image__year">Year </span><span class="years">2018-2019</span>
+                <span id class="image__description">Description </span><span class="description">Video Game for Technology Student Association Competition</span>
+                <span id class="image__role">Role </span><span class="role">Project Lead</span>
+              </div>
+            </a>
+
 
           </div>
       </section>
@@ -159,27 +256,21 @@
         <ul class="social-list">
 
           <li class="social-list__item">
-            <a class="social-list__link" href="https://github.com">
+            <a class="social-list__link" href="https://github.com/CalvinVan">
               <i class="fa-brands fa-github" style="color: #432fa7;"></i> 
             </a>
           </li>
 
           <li class="social-list__item">
-            <a class="social-list__link" href="https://linkedin.com">
+            <a class="social-list__link" href="https://www.linkedin.com/in/calvinvan/"">
               <i class="fa-brands fa-linkedin" style="color: #432fa7;"></i>
-            </a>
-          </li>
-
-          <li class="social-list__item">
-            <a class="social-list__link" href="https://instagram.com">
-              <i class="fa-brands fa-instagram" style="color: #432fa7;"></i>
             </a>
           </li>
 
         </ul>
       </footer>
 
-      <script src="js/index.js"></script>
+      <script src="./js/index.js"></script>
       
 
 

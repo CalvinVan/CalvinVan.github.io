@@ -109,6 +109,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro {
   font-weight: var(--fw-reg);
+  width:10em;
 }
 
 .section__title--intro strong {
@@ -139,10 +140,15 @@ h3 { font-size: var(--fs-h3) }
 
 /* header section */
 
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  background-color: rgb(17, 17, 17);
+  position:fixed;
+  width:100%;
+  z-index: 100;
 }
 
 .logo {
@@ -249,7 +255,7 @@ header {
 /* Intro Section */
 
 .intro {
-  position:relative;
+  padding-top:200px;
 }
 
 .intro__img {
@@ -296,7 +302,7 @@ header {
 /* My services section */
 
 .my-services {
-  background-color: gray;
+  background-color: rgb(93, 93, 93);
   background-image: url(../img/services-bg.jpg);
   background-size: cover;
   background-blend-mode: multiply;
@@ -387,6 +393,151 @@ header {
 
 }
 
+/* Skills Section */
+.skills-section * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.skills-section {
+  background-color: rgb(17, 17, 17);
+  color: var(--clr-light);
+}
+
+.inner {
+  padding-top: 20px;
+}
+
+.skillsHeader {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  margin-bottom:50px;
+  margin-top: -50px;
+}
+
+.skillsHeader:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  width: 300px;
+  background-color: var(--clr-accent);
+  border-radius: 2px;
+}
+
+.skillscontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem, 80px;
+  font-size: 1.2rem;
+
+}
+
+.skill-box {
+  padding: 1rem;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5 rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.skill-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: var(--clr-accent);
+  transition: .5s;
+}
+
+.skill-box:hover >.skill-title:after, .skill-box:hover>.skill-title:before {
+  width: 35px;
+}
+
+.skill-box:hover .skillimg{
+  transform: translateY(-10px);
+}
+
+.skill-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0 ;
+  background-color: var(--clr-accent);
+  transition: .5s;
+}
+
+.skillimg {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: var(--clr-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  
+}
+
+.skillimg:after {
+  content:'';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px; 
+
+}
+
+.skill-title h3{
+  color: var(--clr-light);
+  margin: 0.5rem;
+}
+
+.skill-icon {
+  width: 50px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 990px) {
+  .skillscontainer{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .skillscontainer{
+    grid-template-columns: repeat(1fr);
+  }
+
+}
 
 /* My Work Section */
 
@@ -405,12 +556,81 @@ header {
   background: var(--clr-accent);
   overflow: hidden;
   margin:1em;
+  text-decoration: none;
+  position:relative;
 }
 
 .portfolio__img {
+  height:100%;
+  width:100%;
   transition: 
   transform 750ms cubic-bezier(.5, 0, .5, 1),
   opacity 250ms linear;
+}
+
+.image__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color:var(--clr-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  opacity: 0;
+  transition:
+  transform 750ms cubic-bezier(.5, 0, .5, 1),
+  opacity 250ms linear;
+}
+
+.portfolio__item:hover .image__overlay,
+.portfolio__item:focus .image__overlay
+ {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.portfolio__item:hover  .portfolio__img,
+.portfolio__item:focus  .portfolio__img {
+  transform: scale(1.05);
+}
+
+
+.image__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  width: 12em;
+}
+
+.description{
+  width:13em;
+}
+
+.image__description,
+.image__year,
+.image__role,
+.years,
+.description,
+.role {
+  font-size: var(--fs-body);
+  margin-top: 0.05em;
+}
+
+.image__year,
+.image__description,
+.image__role {
+  text-decoration: underline;
+}
+
+.image__year::after,
+.image__description::after,
+.image__role::after {
+  content: "\a";
+  white-space: pre;
 }
 
 .portfolio__item:focus {
@@ -418,11 +638,7 @@ header {
   z-index: 2;
 }
 
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-  transform: scale(1.2);
-  opacity: .5;
-}
+
 
 
 /* footer section */
@@ -473,12 +689,12 @@ header {
 
 .portfolio-item-individual {
   padding: 0 2em 2em;
-  max-width: 1000px;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
 .portfolio-item-individual p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 60rem;
+  margin-left: 1em;
+  margin-right: 1em;
 }
